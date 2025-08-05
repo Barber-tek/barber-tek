@@ -1,13 +1,13 @@
 package multi_tenant_back.tenant_api.barbershops;
 
-import multi_tenant_back.tenant_api.Barbershops.Base.Model.BarberShops;
-import multi_tenant_back.tenant_api.Barbershops.Base.Model.BarberShopsDto;
-import multi_tenant_back.tenant_api.Barbershops.Base.Repository.BarberShopsRepository;
-import multi_tenant_back.tenant_api.Barbershops.Base.Service.BarberShopsService;
-import multi_tenant_back.tenant_api.CitiesStates.model.CitiesModel;
-import multi_tenant_back.tenant_api.CitiesStates.repository.CitiesRepository;
-import multi_tenant_back.tenant_api.PhoneNumbersTenant.Model.PhoneNumbersModel;
-import multi_tenant_back.tenant_api.PhoneNumbersTenant.Service.PhoneNumbersService;
+import multi_tenant_back.tenant_api.Barbershops.Domain.Model.BarberShops;
+import multi_tenant_back.tenant_api.Barbershops.Infrastructure.BarberShopsDto;
+import multi_tenant_back.tenant_api.Barbershops.Domain.Repository.BarberShopsRepository;
+import multi_tenant_back.tenant_api.Barbershops.Domain.Service.BarberShopsService;
+import multi_tenant_back.tenant_api.CitiesStates.Domain.Model.CitiesModel;
+import multi_tenant_back.tenant_api.CitiesStates.Domain.Repository.CitiesRepository;
+import multi_tenant_back.tenant_api.PhoneNumbersTenant.Domain.Model.PhoneNumbersModel;
+import multi_tenant_back.tenant_api.PhoneNumbersTenant.Domain.Service.PhoneNumbersService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -17,7 +17,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.Optional;
 import java.util.UUID;
 
-import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.any;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
