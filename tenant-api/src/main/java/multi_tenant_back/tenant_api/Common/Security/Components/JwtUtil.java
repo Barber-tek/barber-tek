@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 
 import java.security.Key;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
@@ -27,11 +26,11 @@ public class JwtUtil {
         return  Keys.hmacShaKeyFor(SECRET.getBytes());
     }
 
-    public String generateToken(String email,String role, String fullName, String userId) {
+    public String generateToken(String email,String role, String fullName, UUID userId) {
         Map<String, String > claims = Map.of(
                 "role", role,
                 "name", fullName,
-                "userId", userId
+                "userId", userId.toString()
         );
 
         return Jwts.builder()

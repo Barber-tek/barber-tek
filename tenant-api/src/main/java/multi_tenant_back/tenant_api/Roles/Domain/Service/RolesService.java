@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.security.InvalidParameterException;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -26,5 +27,9 @@ public class RolesService {
         }).toList();
 
         return rolesRepository.saveAll(roles);
+    }
+
+    public RolesModel findByName(String roleName) throws InvalidParameterException{
+        return rolesRepository.findByName(roleName).orElseThrow();
     }
 }

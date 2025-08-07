@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import multi_tenant_back.tenant_api.Auth.Infrastructure.UserDTO;
 import multi_tenant_back.tenant_api.People.Domain.Model.People;
+import multi_tenant_back.tenant_api.Roles.Domain.Model.RolesModel;
 
 import java.util.UUID;
 
@@ -26,9 +27,14 @@ public class UserModel {
     @JoinColumn(name = "people_id")
     private People people;
 
-    public UserModel (UserDTO userDTO, People people) {
+    @ManyToOne
+    @JoinColumn(name = "rol_id")
+    private RolesModel role;
+
+    public UserModel (UserDTO userDTO, People people, RolesModel role) {
         this.email = userDTO.getEmail();
         this.people = people;
+        this.role = role;
     }
 
 }
