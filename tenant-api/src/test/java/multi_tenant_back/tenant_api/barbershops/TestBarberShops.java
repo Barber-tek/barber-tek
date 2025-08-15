@@ -1,9 +1,9 @@
 package multi_tenant_back.tenant_api.barbershops;
 
 import multi_tenant_back.tenant_api.Barbershops.Domain.Model.BarberShops;
-import multi_tenant_back.tenant_api.Barbershops.Infrastructure.BarberShopsDto;
 import multi_tenant_back.tenant_api.Barbershops.Domain.Repository.BarberShopsRepository;
 import multi_tenant_back.tenant_api.Barbershops.Domain.Service.BarberShopsService;
+import multi_tenant_back.tenant_api.Barbershops.Infrastructure.BarberShopsDto;
 import multi_tenant_back.tenant_api.CitiesStates.Domain.Model.CitiesModel;
 import multi_tenant_back.tenant_api.CitiesStates.Domain.Repository.CitiesRepository;
 import multi_tenant_back.tenant_api.PhoneNumbersTenant.Domain.Model.PhoneNumbersModel;

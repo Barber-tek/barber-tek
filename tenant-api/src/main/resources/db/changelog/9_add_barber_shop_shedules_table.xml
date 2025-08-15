@@ -12,7 +12,7 @@
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="day_of_week" type="int">
-                <constraints unique="true" nullable="false"/>
+                <constraints  nullable="false"/>
             </column>
             <column name="is_open" type="boolean" defaultValue="true">
                 <constraints nullable="false"/>

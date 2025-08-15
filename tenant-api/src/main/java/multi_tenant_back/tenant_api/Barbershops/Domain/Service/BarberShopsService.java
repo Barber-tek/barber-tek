@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import multi_tenant_back.tenant_api.Barbershops.Domain.Model.BarberShops;
 import multi_tenant_back.tenant_api.Barbershops.Domain.Repository.BarberShopsRepository;
 import multi_tenant_back.tenant_api.Barbershops.Infrastructure.BarberShopsDto;
-import multi_tenant_back.tenant_api.utils.ExceptionsHandlers.ResourceNotFoundException;
+import multi_tenant_back.tenant_api.Common.Utils.ExceptionsHandlers.ResourceNotFoundException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
