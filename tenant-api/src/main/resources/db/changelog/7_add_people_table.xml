@@ -12,23 +12,24 @@
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="first_name" type="varchar(255)">
-                <constraints unique="true" nullable="false"/>
+                <constraints  nullable="false"/>
             </column>
             <column name="second_name" type="varchar(255)">
-                <constraints unique="true" nullable="false"/>
+                <constraints nullable="true"/>
             </column>
             <column name="last_name" type="varchar(255)">
-                <constraints unique="true" nullable="false"/>
+                <constraints  nullable="false"/>
             </column>
-            <column name="last_second_name" type="varchar(255)">
-                <constraints unique="true" nullable="false"/>
+            <column name="second_last_name" type="varchar(255)">
+                <constraints  nullable="true"/>
             </column>
-            <column name="rol_id" type="int">
+            <column name="cc" type="bigint">
                 <constraints nullable="false"/>
             </column>
+            <column name="phone_numbers" type="bigint">
+                <constraints nullable="false" unique="true"/>
+            </column>
         </createTable>
-        <addForeignKeyConstraint baseTableName="people" baseColumnNames="rol_id" constraintName="rol_id_fk" referencedTableName="roles"
-                                 referencedColumnNames="id"/>
     </changeSet>
 
 </databaseChangeLog>

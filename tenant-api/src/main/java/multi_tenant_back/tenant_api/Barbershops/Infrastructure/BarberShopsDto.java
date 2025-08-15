@@ -9,12 +9,12 @@ import multi_tenant_back.tenant_api.CitiesStates.Domain.Model.CitiesModel;
 @Getter
 @Setter
 public class BarberShopsDto {
-    @NotBlank
+    @NotBlank(message = "Falto el nombre de la barberia")
     private String name;
-    @NotBlank
+    @NotBlank(message = "No se proporciono la dirección de la barberia")
     private String address;
-    @NotNull
+    @NotNull(message = "No fue proporcionado el numero de la barbería")
     private Long phone;
-    @NotNull
+    @NotNull(message = "No se proporciono una ciudad a la que pertenezca la barberia")
     private CitiesModel city;
 }

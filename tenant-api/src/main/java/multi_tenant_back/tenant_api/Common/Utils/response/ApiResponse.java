@@ -1,4 +1,4 @@
-package multi_tenant_back.tenant_api.utils.response;
+package multi_tenant_back.tenant_api.Common.Utils.response;
 
 public record ApiResponse<T>(ApiSummary status, String message, T data) {
 

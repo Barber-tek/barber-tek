@@ -7,26 +7,21 @@
 
     <!-- Cambio para crear la tabla 'roles' -->
     <changeSet id="1" author="juan">
-        <createTable tableName="payments_barber_app">
+        <createTable tableName="users">
             <column name="id" type="UUID">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="date" type="timestamp">
-                <constraints  nullable="false"/>
-            </column>
-            <column name="mount" type="numeric(12,2)">
+            <column name="email" type="varchar(256)">
                 <constraints nullable="false"/>
             </column>
-            <column name="barber_shop_id" type="uuid">
+            <column name="password" type="text">
                 <constraints nullable="false"/>
             </column>
-            <column name="barber_id" type="uuid">
+            <column name="people_id" type="uuid">
                 <constraints nullable="false"/>
             </column>
         </createTable>
-        <addForeignKeyConstraint baseTableName="payments_barber_app" baseColumnNames="barber_shop_id" constraintName="barber_shop_id_fk" referencedTableName="barber_shops"
-                                 referencedColumnNames="id"/>
-        <addForeignKeyConstraint baseTableName="payments_barber_app" baseColumnNames="barber_id" constraintName="barber_id_fk" referencedTableName="people"
+        <addForeignKeyConstraint baseTableName="users" baseColumnNames="people_id" constraintName="people_id_fk" referencedTableName="people"
                                  referencedColumnNames="id"/>
     </changeSet>
 
