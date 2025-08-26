@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <!-- Cambio para crear la tabla 'roles' -->
+    <changeSet id="1" author="juan">
+        <createTable tableName="users">
+            <column name="id" type="UUID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="email" type="varchar(256)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password" type="text">
+                <constraints nullable="false"/>
+            </column>
+            <column name="people_id" type="uuid">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rol_id" type="integer">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="users" baseColumnNames="people_id" constraintName="people_id_fk" referencedTableName="people"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="users" baseColumnNames="rol_id" constraintName="rol_id_fk" referencedTableName="roles"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+</databaseChangeLog>
